@@ -1,4 +1,4 @@
-import CodeMirror from '../../index';
+import CodeMirror from 'react-readonly-codemirror6';
 import './App.css';
 
 function App() {
