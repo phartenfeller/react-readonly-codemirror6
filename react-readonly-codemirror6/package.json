@@ -1,37 +1,83 @@
 {
   "name": "react-readonly-codemirror6",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/phartenfeller/node-js-template.git",
   "author": "phartenfeller",
   "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "rm -rf lib && webpack",
+    "transpile": "babel src -d dist --copy-files",
+    "rollup": "rollup -c"
   },
-  "devDependencies": {
-    "eslint": "^7.23.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.2.1"
-  },
-  "dependencies": {
-    "@codemirror/basic-setup": "^0.18.2",
-    "@codemirror/gutter": "^0.18.4",
-    "@codemirror/lang-html": "^0.18.1",
-    "@codemirror/lang-javascript": "^0.18.0",
-    "@codemirror/lang-json": "^0.18.0",
-    "@codemirror/legacy-modes": "^0.18.1",
-    "@codemirror/state": "^0.18.7",
-    "@codemirror/stream-parser": "^0.18.2",
-    "@codemirror/theme-one-dark": "^0.18.1",
-    "@codemirror/view": "^0.18.17",
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.9",
+    "@babel/preset-react": "^7.14.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@swc/core": "^1.2.73",
+    "@types/react": "^17.0.15",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "dedent": "^0.7.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.3.2",
+    "rollup": "^2.55.1",
+    "rollup-plugin-filesize": "^9.1.1",
+    "rollup-plugin-swc": "^0.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "style-loader": "^3.2.1",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.5",
+    "webpack": "^5.48.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "@codemirror/basic-setup": "^0.18.0",
+    "@codemirror/gutter": "^0.18.0",
+    "@codemirror/highlight": "^0.18.4",
+    "@codemirror/lang-html": "^0.18.0",
+    "@codemirror/lang-javascript": "^0.18.0",
+    "@codemirror/lang-json": "^0.18.0",
+    "@codemirror/legacy-modes": "^0.18.0",
+    "@codemirror/state": "^0.18.7",
+    "@codemirror/stream-parser": "^0.18.1",
+    "@codemirror/theme-one-dark": "^0.18.0",
+    "@codemirror/view": "^0.18.19"
+  },
+  "browserslist": [
+    "last 2 years"
+  ]
 }
