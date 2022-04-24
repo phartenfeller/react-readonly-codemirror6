@@ -1,13 +1,12 @@
 {
   "name": "react-readonly-codemirror6",
   "version": "1.0.0",
-  "repository": "https://github.com/phartenfeller/node-js-template.git",
-  "author": "phartenfeller",
+  "repository": "https://github.com/phartenfeller/react-readonly-codemirror6.git",
+  "homepage": "https://github.com/phartenfeller/react-readonly-codemirror6",
+  "author": "Philipp Hartenfeller",
   "license": "MIT",
   "type": "module",
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "index.jsx",
   "exports": {
     "import": "./index.jsx"
   },
@@ -17,12 +16,6 @@
     "README.md"
   ],
   "sideEffects": false,
-  "scripts": {
-    "start": "node index.js",
-    "build": "rm -rf lib && webpack",
-    "transpile": "babel src -d dist --copy-files",
-    "rollup": "rollup -c"
-  },
   "peerDependencies": {
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
@@ -50,8 +43,5 @@
     "@codemirror/state": "^0.19",
     "@codemirror/theme-one-dark": "^0.19",
     "@codemirror/view": "^0.19"
-  },
-  "browserslist": [
-    "last 2 years"
-  ]
+  }
 }

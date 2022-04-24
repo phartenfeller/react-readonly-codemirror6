@@ -15,6 +15,8 @@ function getLanguageExtension(language) {
     case 'javascript':
     case 'js':
       return javascript();
+    case 'jsx':
+      return javascript({ jsx: true });
     case 'json':
       return json();
     case 'css':

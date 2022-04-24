@@ -1,6 +1,7 @@
 .body-div {
   background: rgb(210, 210, 210);
   min-height: 100vh;
+  padding-bottom: 128px;
 }
 
 .App-header {
