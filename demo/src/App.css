@@ -1,9 +1,20 @@
+.body-div {
+  background: rgb(210, 210, 210);
+  min-height: 100vh;
+  padding-bottom: 128px;
+}
+
 .App-header {
-  background-color: #282c34;
-  color: #fff
+  background-color: #415c94;
+  color: #fff;
+  margin-bottom: 12px;
 }
 
 .header-text {
   padding: 12px;
   margin: 0;
+}
+
+.main-div {
+  margin: 32px 64px;
 }
