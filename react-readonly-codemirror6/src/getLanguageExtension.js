@@ -8,7 +8,7 @@ import { plSQL } from '@codemirror/legacy-modes/mode/sql';
 import { yaml } from '@codemirror/legacy-modes/mode/yaml';
 import { StreamLanguage } from '@codemirror/stream-parser';
 
-function getLanguageExtension(language: string) {
+function getLanguageExtension(language) {
   // https://github.com/codemirror/legacy-modes
   const lang = language ? language.replace(`language-`, '') : null;
   switch (lang) {
@@ -39,7 +39,7 @@ function getLanguageExtension(language: string) {
       if (lang) {
         // eslint-disable-next-line no-console
         console.warn(
-          `Unhandeled language in CodeMirror ${lang}. Fallback to default JavaScript`
+          `Unhandeled language for CodeMirror: "${lang}". Fallback to default JavaScript`
         );
       }
       return javascript();
