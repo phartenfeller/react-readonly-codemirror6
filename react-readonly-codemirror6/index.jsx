@@ -43,7 +43,7 @@ function initState({ code, lang, fontSize }) {
   });
 }
 
-const ROCodeMirror = ({ code, lang, fontSize }) => {
+const useRocm = ({ code, lang, fontSize }) => {
   const editorParentRef = useRef(null);
   const editorRef = useRef(null);
 
@@ -73,4 +73,4 @@ const ROCodeMirror = ({ code, lang, fontSize }) => {
   return editorParentRef;
 };
 
-export default ROCodeMirror;
+export default useRocm;

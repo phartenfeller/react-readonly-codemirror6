@@ -1,19 +1,17 @@
-import ROCodeMirror from "react-readonly-codemirror6";
+import useRocm from "react-readonly-codemirror6";
 import "./App.css";
 
 const code = `const x = 1;
 console.log(x + 1 + 'test');`;
 
 function App() {
-  // const extensions = [javascript(), oneDarkHighlightStyle, oneDarkTheme];
-
-  const ref = ROCodeMirror({
+  const ref = useRocm({
     code: code,
     lang: "js",
     fontSize: 14,
   });
 
-  const refCss = ROCodeMirror({
+  const refCss = useRocm({
     code: `.App-header {
   background-color: #415c94;
   color: #fff;
@@ -28,7 +26,7 @@ function App() {
     fontSize: 16,
   });
 
-  const refPlsql = ROCodeMirror({
+  const refPlsql = useRocm({
     code: `insert into table (id, name) values (1, 'test');`,
     langExtension: "plsql",
     fontSize: 22,
