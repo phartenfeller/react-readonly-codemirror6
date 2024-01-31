@@ -1,44 +1,35 @@
-import { EditorView } from '@codemirror/view';
-import { lineNumbers } from '@codemirror/gutter';
-import { defaultHighlightStyle } from '@codemirror/highlight';
+import { EditorView, basicSetup } from 'codemirror';
 import { EditorState } from '@codemirror/state';
-import {
-  oneDarkHighlightStyle,
-  oneDarkTheme,
-} from '@codemirror/theme-one-dark';
-// eslint-disable-next-line import/no-unresolved
+import { oneDark } from '@codemirror/theme-one-dark';
 import { useEffect, useRef } from 'react';
 import getLanguageExtension from './src/getLanguageExtension';
+
+const noPasteExtension = EditorView.domEventHandlers({
+  paste: (event) => {
+    // Prevent the default paste action
+    event.preventDefault();
+    return true; // This indicates that the event has been handled
+  },
+});
 
 function getEditorView(parent) {
   return new EditorView({
     parent: parent.current,
-    // lineWrapping: true,
   });
 }
 
-function getFontsizeTheme(size = 14) {
-  return EditorView.theme({
-    '&': {
-      fontSize: `${size}px`,
-    },
-  });
-}
-
-function initState({ code, lang, fontSize }) {
-  // const lg = langExtension();
+function initState({ code, lang }) {
   const language = getLanguageExtension(lang);
 
   return EditorState.create({
     doc: code,
     extensions: [
-      lineNumbers(),
+      noPasteExtension,
+      basicSetup,
+      oneDark,
       language,
-      oneDarkTheme,
-      oneDarkHighlightStyle,
-      getFontsizeTheme(fontSize),
-      defaultHighlightStyle.fallback,
       EditorView.editable.of(false),
+      EditorView.lineWrapping,
     ],
   });
 }
@@ -51,14 +42,12 @@ const useRocm = ({ code, lang, fontSize }) => {
   useEffect(() => {
     if (!editorRef.current) {
       const view = getEditorView(editorParentRef);
+      view.dom.style.fontSize = `${fontSize}px`;
       editorRef.current = view;
-      // setEditorView(view);
 
       const state = initState({
         lang,
         code,
-        fontSize,
-        // extionsions: extensions,
       });
       view.setState(state);
 

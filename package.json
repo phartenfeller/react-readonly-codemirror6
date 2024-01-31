@@ -1,0 +1,20 @@
+{
+  "name": "react-readonly-codemirror6-root",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:phartenfeller/react-readonly-codemirror6.git",
+  "author": "phartenfeller",
+  "license": "MIT",
+  "dependencies": {
+    "@codemirror/lang-html": "^6.4.8",
+    "@codemirror/lang-javascript": "^6.2.1",
+    "@codemirror/lang-json": "^6.0.1",
+    "@codemirror/lang-xml": "^6.0.2",
+    "@codemirror/language": "^6.10.0",
+    "@codemirror/legacy-modes": "^6.3.3",
+    "@codemirror/state": "^6.4.0",
+    "@codemirror/theme-one-dark": "^6.1.2",
+    "@codemirror/view": "^6.23.1",
+    "codemirror": "^6.0.1"
+  }
+}

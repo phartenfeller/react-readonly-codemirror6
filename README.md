@@ -39,4 +39,16 @@ const myComponent = () => {
 - Support more languages
 - More configuration options
 
-s
+## Development
+
+```bash
+# in root
+yarn
+
+cd react-readonly-codemirror6 
+yarn link
+
+cd ../demo
+yarn
+yarn link react-readonly-codemirror6 
+

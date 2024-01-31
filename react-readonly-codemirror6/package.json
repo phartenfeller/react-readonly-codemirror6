@@ -1,6 +1,6 @@
 {
   "name": "react-readonly-codemirror6",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "repository": "https://github.com/phartenfeller/react-readonly-codemirror6.git",
   "homepage": "https://github.com/phartenfeller/react-readonly-codemirror6",
   "author": "Philipp Hartenfeller",
@@ -17,31 +17,32 @@
   ],
   "sideEffects": false,
   "peerDependencies": {
-    "prop-types": "^15.7.2",
+    "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.3.2"
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.2.4"
   },
   "dependencies": {
-    "@codemirror/gutter": "^0.19",
-    "@codemirror/highlight": "^0.19",
-    "@codemirror/lang-html": "^0.19",
-    "@codemirror/lang-javascript": "^0.19",
-    "@codemirror/lang-json": "^0.19",
-    "@codemirror/legacy-modes": "^0.19",
-    "@codemirror/state": "^0.19",
-    "@codemirror/theme-one-dark": "^0.19",
-    "@codemirror/view": "^0.19"
+    "@codemirror/lang-html": "^6.4.8",
+    "@codemirror/lang-javascript": "^6.2.1",
+    "@codemirror/lang-json": "^6.0.1",
+    "@codemirror/lang-xml": "^6.0.2",
+    "@codemirror/language": "^6.10.0",
+    "@codemirror/legacy-modes": "^6.3.3",
+    "@codemirror/state": "^6.4.0",
+    "@codemirror/theme-one-dark": "^6.1.2",
+    "@codemirror/view": "^6.23.1",
+    "codemirror": "^6.0.1"
   }
 }

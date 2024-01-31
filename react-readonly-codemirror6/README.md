@@ -1,6 +1,6 @@
 # Readonly Codemirror 6 React Hook
 
-I use this component for server-side generated code previews (with Gatsby). It uses [Codemirror 6](https://codemirror.net/6/) which is currently in preview.
+I use this component for server-side generated code previews (with Gatsby). It uses [Codemirror 6](https://codemirror.net/6/).
 
 ## Install
 
